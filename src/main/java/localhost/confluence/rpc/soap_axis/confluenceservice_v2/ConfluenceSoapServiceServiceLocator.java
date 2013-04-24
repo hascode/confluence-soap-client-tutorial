@@ -5,9 +5,9 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package devel.hascode.confluence.rpc.soap_axis.confluenceservice_v2;
+package localhost.confluence.rpc.soap_axis.confluenceservice_v2;
 
-public class ConfluenceSoapServiceServiceLocator extends org.apache.axis.client.Service implements devel.hascode.confluence.rpc.soap_axis.confluenceservice_v2.ConfluenceSoapServiceService {
+public class ConfluenceSoapServiceServiceLocator extends org.apache.axis.client.Service implements localhost.confluence.rpc.soap_axis.confluenceservice_v2.ConfluenceSoapServiceService {
 
     public ConfluenceSoapServiceServiceLocator() {
     }
@@ -22,7 +22,7 @@ public class ConfluenceSoapServiceServiceLocator extends org.apache.axis.client.
     }
 
     // Use to get a proxy class for ConfluenceserviceV2
-    private java.lang.String ConfluenceserviceV2_address = "http://hascode.devel:1990/confluence/rpc/soap-axis/confluenceservice-v2";
+    private java.lang.String ConfluenceserviceV2_address = "http://localhost:1990/confluence/rpc/soap-axis/confluenceservice-v2";
 
     public java.lang.String getConfluenceserviceV2Address() {
         return ConfluenceserviceV2_address;
@@ -39,7 +39,7 @@ public class ConfluenceSoapServiceServiceLocator extends org.apache.axis.client.
         ConfluenceserviceV2WSDDServiceName = name;
     }
 
-    public devel.hascode.confluence.rpc.soap_axis.confluenceservice_v2.ConfluenceSoapService getConfluenceserviceV2() throws javax.xml.rpc.ServiceException {
+    public localhost.confluence.rpc.soap_axis.confluenceservice_v2.ConfluenceSoapService getConfluenceserviceV2() throws javax.xml.rpc.ServiceException {
        java.net.URL endpoint;
         try {
             endpoint = new java.net.URL(ConfluenceserviceV2_address);
@@ -50,9 +50,9 @@ public class ConfluenceSoapServiceServiceLocator extends org.apache.axis.client.
         return getConfluenceserviceV2(endpoint);
     }
 
-    public devel.hascode.confluence.rpc.soap_axis.confluenceservice_v2.ConfluenceSoapService getConfluenceserviceV2(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
+    public localhost.confluence.rpc.soap_axis.confluenceservice_v2.ConfluenceSoapService getConfluenceserviceV2(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
         try {
-            devel.hascode.confluence.rpc.soap_axis.confluenceservice_v2.ConfluenceserviceV2SoapBindingStub _stub = new devel.hascode.confluence.rpc.soap_axis.confluenceservice_v2.ConfluenceserviceV2SoapBindingStub(portAddress, this);
+            localhost.confluence.rpc.soap_axis.confluenceservice_v2.ConfluenceserviceV2SoapBindingStub _stub = new localhost.confluence.rpc.soap_axis.confluenceservice_v2.ConfluenceserviceV2SoapBindingStub(portAddress, this);
             _stub.setPortName(getConfluenceserviceV2WSDDServiceName());
             return _stub;
         }
@@ -72,8 +72,8 @@ public class ConfluenceSoapServiceServiceLocator extends org.apache.axis.client.
      */
     public java.rmi.Remote getPort(Class serviceEndpointInterface) throws javax.xml.rpc.ServiceException {
         try {
-            if (devel.hascode.confluence.rpc.soap_axis.confluenceservice_v2.ConfluenceSoapService.class.isAssignableFrom(serviceEndpointInterface)) {
-                devel.hascode.confluence.rpc.soap_axis.confluenceservice_v2.ConfluenceserviceV2SoapBindingStub _stub = new devel.hascode.confluence.rpc.soap_axis.confluenceservice_v2.ConfluenceserviceV2SoapBindingStub(new java.net.URL(ConfluenceserviceV2_address), this);
+            if (localhost.confluence.rpc.soap_axis.confluenceservice_v2.ConfluenceSoapService.class.isAssignableFrom(serviceEndpointInterface)) {
+                localhost.confluence.rpc.soap_axis.confluenceservice_v2.ConfluenceserviceV2SoapBindingStub _stub = new localhost.confluence.rpc.soap_axis.confluenceservice_v2.ConfluenceserviceV2SoapBindingStub(new java.net.URL(ConfluenceserviceV2_address), this);
                 _stub.setPortName(getConfluenceserviceV2WSDDServiceName());
                 return _stub;
             }
@@ -105,7 +105,7 @@ public class ConfluenceSoapServiceServiceLocator extends org.apache.axis.client.
     }
 
     public javax.xml.namespace.QName getServiceName() {
-        return new javax.xml.namespace.QName("http://hascode.devel:1990/confluence/rpc/soap-axis/confluenceservice-v2", "ConfluenceSoapServiceService");
+        return new javax.xml.namespace.QName("http://localhost:1990/confluence/rpc/soap-axis/confluenceservice-v2", "ConfluenceSoapServiceService");
     }
 
     private java.util.HashSet ports = null;
@@ -113,7 +113,7 @@ public class ConfluenceSoapServiceServiceLocator extends org.apache.axis.client.
     public java.util.Iterator getPorts() {
         if (ports == null) {
             ports = new java.util.HashSet();
-            ports.add(new javax.xml.namespace.QName("http://hascode.devel:1990/confluence/rpc/soap-axis/confluenceservice-v2", "confluenceservice-v2"));
+            ports.add(new javax.xml.namespace.QName("http://localhost:1990/confluence/rpc/soap-axis/confluenceservice-v2", "confluenceservice-v2"));
         }
         return ports.iterator();
     }

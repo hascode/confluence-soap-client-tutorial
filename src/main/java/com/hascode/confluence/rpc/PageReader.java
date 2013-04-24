@@ -2,12 +2,12 @@ package com.hascode.confluence.rpc;
 
 import javax.xml.rpc.ServiceException;
 
+import localhost.confluence.rpc.soap_axis.confluenceservice_v2.ConfluenceSoapService;
+import localhost.confluence.rpc.soap_axis.confluenceservice_v2.ConfluenceSoapServiceServiceLocator;
+
 import com.atlassian.confluence.rpc.AuthenticationFailedException;
 import com.atlassian.confluence.rpc.RemoteException;
 import com.atlassian.confluence.rpc.soap.beans.RemotePage;
-
-import devel.hascode.confluence.rpc.soap_axis.confluenceservice_v2.ConfluenceSoapService;
-import devel.hascode.confluence.rpc.soap_axis.confluenceservice_v2.ConfluenceSoapServiceServiceLocator;
 
 public class PageReader {
 	public static void main(final String[] args)
